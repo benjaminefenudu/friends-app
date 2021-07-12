@@ -1,11 +1,12 @@
 // importing Friends data
 let Friends = require("../models/FriendList")
 
-// =-=-=-= Read all Friends' record
+// =-=-=-= Read all Friends' record =-=-=-=
 const getFriends = (req, res) => {
     res.status(200).json(Friends)
 }
 
+// =-=-=-= Read single Friend's record =-=-=-=
 const getSingleFriend = (req, res) => {
     const {id} = req.params;
     singleFriend = Friends.find((friend) => friend.id === Number(id))
