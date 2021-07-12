@@ -7,7 +7,7 @@ const  {
     createFriend,
     updateFriend,
     deleteFriend
-} = require("../controllers/friendsController")
+} = require("../controllers/friends")
 
 router.route("/").get(getFriends).post(createFriend);
 router.route("/:id").get(getSingleFriend).put(updateFriend).delete(deleteFriend)
